@@ -1,4 +1,4 @@
----500px portfolio
+--500px portfolio
 
 By using the the 500px API - https://github.com/500px/api-documentation
 I have created a Photo Portfolio Page. 
