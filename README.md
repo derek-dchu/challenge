@@ -5,8 +5,7 @@
 ```json
 {pages: 
     { title:"About", content:"This is my about page"}, 
-    { title:"Contact", content:"<h1> Contact Page</h1>
-    <font size="4" color="#908e8e">Email : andrew@andrewrowat.com <br> Tel: +1 (718) 576.1770 (USA)<br>Tel: +86 1381.726.8869 (China)</font>"}
+    { title:"Contact", content:"<h1> Contact Page</h1><font>Email : andrew@andrewrowat.com <br> Tel: +1 (718) 576.1770 (USA)<br>Tel: +86 1381.726.8869 (China)</font>"}
 }
 ```   
 
