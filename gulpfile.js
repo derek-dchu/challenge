@@ -41,6 +41,6 @@ gulp.task('test', function() {
 
 gulp.task('default', [
   'sass',
-  'develop',
-  'watch'
+  'watch',
+  'develop'
 ]);
