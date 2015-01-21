@@ -57,5 +57,33 @@ describe('/category/:tag endpoint', function() {
   });
 });
 
+describe('/contact endpoint', function() {
+  it('should return contact page', function (done) {
+    request(app)
+      .get('/contact')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) {
+          throw err;
+        }
+        expect(res.text.indexOf('<title>Contact</title>') > 0).to.be.true();
+        done();
+      });
+  });
+});
 
+describe('/about endpoint', function() {
+  it('should return contact page', function (done) {
+    request(app)
+      .get('/about')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) {
+          throw err;
+        }
+        expect(res.text.indexOf('<title>About</title>') > 0).to.be.true();
+        done();
+      });
+  });
+});
 
