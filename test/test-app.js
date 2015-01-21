@@ -7,8 +7,8 @@ var app = express();
 
 require('../config/express')(app, config);
 
-var request = require('supertest');
-var assert = require('chai').assert;
+var request = require('supertest'),
+    expect = require('chai').expect;
 
 
 describe('/ endpoint', function () {
@@ -20,7 +20,7 @@ describe('/ endpoint', function () {
         if (err) {
           throw err;
         }
-        assert.isTrue(res.text.indexOf('<title>500px-grid</title>') > 0);
+        expect(res.text.indexOf('<title>500px-grid</title>') > 0).to.be.true();
         done();
       });
   });
