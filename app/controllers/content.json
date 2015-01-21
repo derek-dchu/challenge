@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "index": {
+      "title": "500px-grid"
+    },
+    "about": {
+      "title": "About",
+      "content": "Derek Hu (derek-dchu.github.io)"
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Derek Hu"
+    }
+  }
+}
