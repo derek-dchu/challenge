@@ -30,13 +30,13 @@ describe('/category endpoint', function () {
   it('should redirect target page', function (done) {
     request(app)
       .post('/category')
-      .send({tag: 'dog'})
-      .expect(301)
+      .send({tag: 'dogs and cats  '})
+      .expect(302)
       .end(function (err, res) {
         if (err) {
           throw err;
         }
-        expect(res.header.location).to.equal('/category/dog');
+        expect(res.header.location).to.equal('/category/dogs-and-cats');
         done();
       });
   });
