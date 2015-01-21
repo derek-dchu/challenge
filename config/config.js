@@ -8,7 +8,7 @@ var config = {
     app: {
       name: '500px-grid'
     },
-    port: 3000
+    port: process.env.PORT || 3000
   },
 
   test: {
@@ -16,7 +16,7 @@ var config = {
     app: {
       name: '500px-grid'
     },
-    port: 3001
+    port: process.env.PORT || 3001
   },
 
   production: {
@@ -24,7 +24,7 @@ var config = {
     app: {
       name: '500px-grid'
     },
-    port: 3000
+    port: process.env.PORT || 3000
   }
 };
 
