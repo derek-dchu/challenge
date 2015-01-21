@@ -26,7 +26,8 @@
     "gulp-livereload": "~3.4.0",
     "gulp-mocha": "^2.0.0",
     "gulp-nodemon": "~1.0.4",
-    "gulp-ruby-sass": "~0.7.1"
+    "gulp-ruby-sass": "~0.7.1",
+    "supertest": "^0.15.0"
   },
   "license": "MIT"
 }
