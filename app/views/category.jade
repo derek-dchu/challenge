@@ -1,0 +1,15 @@
+extends layout
+block content
+    if error
+        div.error
+            p Something wrong with our service, please try again later.
+    else
+        div.images
+            for image in images
+                div.image
+                    a(id="photo_#{image.id}")
+                        img(src="#{image.url}")
+                    div.details
+                        div.inside
+                            p.name #{image.name}
+                            p.description #{image.description}
