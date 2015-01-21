@@ -31,7 +31,7 @@ gulp.task('develop', function () {
 });
 
 gulp.task('test', function() {
-  process.env.PORT = 3001;
+  process.env.NODE_ENV = 'test';
   return gulp.src('test/*.js')
     .pipe(mocha({
       reporter: 'spec'

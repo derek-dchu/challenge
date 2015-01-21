@@ -20,7 +20,7 @@ describe('/ endpoint', function () {
         if (err) {
           throw err;
         }
-        assert.isTrue(res.text.indexOf('<title>500px-grid | index</title>') > 0);
+        assert.isTrue(res.text.indexOf('<title>500px-grid</title>') > 0);
         done();
       });
   });
