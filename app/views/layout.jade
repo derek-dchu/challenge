@@ -23,9 +23,9 @@ html(lang='en')
               span.icon-bar
               span.icon-bar
             a(href="#").navbar-brand 500px-Grid
-            form(role="search").navbar-form.navbar-left
+            form(role="search" action="/category" method="POST").navbar-form.navbar-left
               div.form-group
-                input(type="text", placeholder="Tag").form-control
+                input(type="text", placeholder="Tag" name="tag")#search-tag.form-control
               button(type="submit").btn.btn-primary search
           div#navbar-collapse-group.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right
