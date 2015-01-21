@@ -51,7 +51,20 @@ describe('/category/:tag endpoint', function() {
         if (err) {
           throw err;
         }
-        expect(res.text.indexOf('<title>dogs-and-cats</title>') > 0).to.be.true();
+        expect(res.text.indexOf('<title>dogs and cats</title>') > 0).to.be.true();
+        done();
+      });
+  });
+
+  it('should return a page contains images', function (done) {
+    request(app)
+      .get('/category/dogs-and-cats')
+      .expect(200)
+      .end(function (err, res) {
+        if (err) {
+          throw err;
+        }
+        expect(res.text).to.string('<img src=');
         done();
       });
   });
