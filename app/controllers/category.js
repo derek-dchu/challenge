@@ -23,7 +23,7 @@ router.get('/:tag', function (req, res, next) {
     title: tag
   };
 
-  api.searchByTag(tag, {'rpp': 20, 'image_size': 2}, function(err, data) {
+  api.searchByTag(tag, {'rpp': 20, 'image_size': 3}, function(err, data) {
     if (err) {
       response.error = err;
     } else {

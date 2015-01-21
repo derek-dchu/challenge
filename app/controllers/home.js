@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
   var response = {
     title: page.title
   };
-  api.getPopular( {'rpp': 20, 'image_size': 2}, function(err, data) {
+  api.getPopular( {'rpp': 20, 'image_size': 3}, function(err, data) {
     if (err) {
       response.error = err;
     } else {
