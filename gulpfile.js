@@ -3,7 +3,9 @@
 var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     livereload = require('gulp-livereload'),
-    sass = require('gulp-ruby-sass');
+    sass = require('gulp-ruby-sass'),
+    mocha = require('gulp-mocha'),
+    exit = require('gulp-exit');
 
 gulp.task('sass', function () {
   return gulp.src('./public/css/*.scss')
@@ -26,6 +28,15 @@ gulp.task('develop', function () {
       livereload.changed();
     }, 500);
   });
+});
+
+gulp.task('test', function() {
+  process.env.PORT = 3001;
+  return gulp.src('test/*.js')
+    .pipe(mocha({
+      reporter: 'spec'
+    }))
+    .pipe(exit());
 });
 
 gulp.task('default', [
