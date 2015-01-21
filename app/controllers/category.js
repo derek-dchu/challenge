@@ -18,11 +18,12 @@ router.post('/', function (req, res, next) {
 
 router.get('/:tag', function (req, res, next) {
   var images = [];
+  var tag = req.params.tag.replace(/\-/g, ' ');
   var response = {
-    title: req.params.tag
+    title: tag
   };
 
-  api.searchByTag(req.params.tag, {'rpp': 20, 'image_size': 2}, function(err, data) {
+  api.searchByTag(tag, {'rpp': 20, 'image_size': 2}, function(err, data) {
     if (err) {
       response.error = err;
     } else {
