@@ -14,7 +14,7 @@
     // Prepare overlap div
     var overlap = $('#overlap');
     overlap.find('.overlap-image > img').attr('src', imgUrl);
-    overlap.find('.overlap-description > p').text(description);
+    overlap.find('.overlap-description').html(description);
 
     // Show it on the screen
     overlap.removeClass('hide');
