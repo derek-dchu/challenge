@@ -1,15 +1,15 @@
 'use strict';
 
-function Image (opts) {
-  if (!opts) {
-    opts = {};
+function Image (params) {
+  if (!params) {
+    params = {};
   }
-  this.id = opts.id || null;
-  this.name = opts.name || '';
-  this.description = opts.description || '';
-  this.url = opts.url || '';
-  this.width = opts.width || null;
-  this.height = opts.height || null;
+  this.id = params.id || null;
+  this.name = params.name || '';
+  this.description = params.description || '';
+  this.url = params.image_url || '';
+  this.width = params.width || null;
+  this.height = params.height || null;
 }
 
 module.exports = Image;
