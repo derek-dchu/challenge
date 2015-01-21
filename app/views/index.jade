@@ -1,20 +1,30 @@
 extends layout
 
 block content
-  if error
-    div.error
-      p Something wrong with our service, please try again later.
-  else
-    div#images
-      for image in images
-        div.image
-          a(id="photo_#{image.id}")
-            img(src="#{image.url}")
-          div.details
-            div.inside
-              div.title
-                p #{image.name}
-              div.description
-                p #{image.description}
+    if error
+        div.error
+            p Something wrong with our service, please try again later.
+    else
+        div#images
+            for image in images
+                div.image
+                    a(id="photo_#{image.id}")
+                        img(src="#{image.url}")
+                    div.details
+                        div.inside
+                            div.title
+                                p #{image.name}
+                            div.description
+                                p #{image.description}
+
+        div#overlap.hide
+            button#overlap-close-btn: span.fa.fa-close
+            div.overlap-image
+                img()
+            div.overlap-description
+                p
+
+block body-js
+    script(src='/js/popup.js')
 
 
