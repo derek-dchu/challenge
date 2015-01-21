@@ -5,11 +5,11 @@
     },
     "about": {
       "title": "About",
-      "content": "Derek Hu (derek-dchu.github.io)"
+      "content": "This is my about page"
     },
     "contact": {
       "title": "Contact",
-      "content": "Derek Hu"
+      "content": "<h1>Contact Page</h1><font>Derek Hu <derek.dchu@gmail.com></font>"
     }
   }
 }
