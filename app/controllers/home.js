@@ -2,8 +2,7 @@
 
 var express = require('express'),
     fs = require('fs'),
-    Image = require('../models/image'),
-    api = require('../../lib/500px-api').photos;
+    Image = require('../models/image');
 
 var router = express.Router();
 
@@ -16,21 +15,12 @@ module.exports = function (app) {
 
 router.get('/', function (req, res, next) {
   // Get photos
-  var images = [];
   var response = {
     title: page.title
   };
-  api.getPopular( {'rpp': 20, 'image_size': 3}, function(err, data) {
-    if (err) {
-      response.error = err;
-    } else {
-      data.photos.forEach(function( elem, index, arr ) {
-        images.push( new Image(elem) );
-      });
-
-      response.images = images;
-    }
-
+  Image.getPopular(function(err, data) {
+    response.error = err;
+    response.images = data.images;
     res.render('index', response);
   });
 });

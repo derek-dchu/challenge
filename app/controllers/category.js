@@ -23,17 +23,9 @@ router.get('/:tag', function (req, res, next) {
     title: tag
   };
 
-  api.searchByTag(tag, {'rpp': 20, 'image_size': 3}, function(err, data) {
-    if (err) {
-      response.error = err;
-    } else {
-      data.photos.forEach(function (elem, index, arr) {
-        images.push(new Image(elem));
-      });
-
-      response.images = images;
-    }
-
+  Image.searchByTag(tag, function(err, data) {
+    response.error = err;
+    response.images = data.images;
     res.render('category', response);
   });
 });
