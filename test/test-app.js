@@ -26,3 +26,20 @@ describe('/ endpoint', function () {
   });
 });
 
+describe('/category endpoint', function () {
+  it('should redirect target page', function (done) {
+    request(app)
+      .post('/category')
+      .send({tag: 'dog'})
+      .expect(301)
+      .end(function (err, res) {
+        if (err) {
+          throw err;
+        }
+        expect(res.header.location).to.equal('/category/dog');
+        done();
+      });
+  });
+});
+
+
