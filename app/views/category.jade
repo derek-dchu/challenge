@@ -5,7 +5,7 @@ block content
         div.error
             p Something wrong with our service, please try again later.
     else
-        div#images
+        div#images.clearfix
             for image in images
                 div.image
                     a(id="photo_#{image.id}")
