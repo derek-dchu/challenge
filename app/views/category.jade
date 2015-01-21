@@ -4,12 +4,14 @@ block content
         div.error
             p Something wrong with our service, please try again later.
     else
-        div.images
+        div#images
             for image in images
                 div.image
                     a(id="photo_#{image.id}")
                         img(src="#{image.url}")
                     div.details
                         div.inside
-                            p.name #{image.name}
-                            p.description #{image.description}
+                            div.title
+                                p #{image.name}
+                            div.description
+                                p #{image.description}
